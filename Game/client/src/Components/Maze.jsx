@@ -23,7 +23,8 @@ export default function Maze() {
       gridY = window.innerHeight - bottomHeight;
       if (gridX % 2 === 0) gridX++;
     }
-    //console.log(gridY)
+    gridY = Math.round(gridY)
+    gridX = Math.round(gridX)
   };
   const genGrid = () => {
     setProperties()
@@ -45,6 +46,7 @@ export default function Maze() {
     }
     const table = React.createElement("table", { style:{"height":"50vh"}, id: "grid" }, rows)
     setMazeTable(table)
+    console.log(gridX,gridY)
     grid = new Array(gridX).fill(0).map(() => new Array(gridY).fill(0))
     endPos = [gridX - 1, gridY - 1]
   }
