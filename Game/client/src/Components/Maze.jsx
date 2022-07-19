@@ -28,7 +28,7 @@ export default function Maze() {
   };
   const genGrid = () => {
     setProperties()
-    for (let i = 0; i < gridY/2; i+=13) {
+    for (let i = 0; i < gridY/2; i+=9) {
 
       let cells = []
       for (let j = 0; j < gridX; j+=9) {
